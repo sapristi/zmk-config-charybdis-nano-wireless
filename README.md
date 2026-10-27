@@ -28,8 +28,10 @@ The wiring for the sensor was done according to this table:
 
 This (forked) repo contains the software that I use. There are three files that you may need to modify:
 - [config/charybdis.keymap](./config/charybdis.keymap) : keymap
-- [config/boards/shields/charybdis/charybdis_right.conf](./config/boards/shields/charybdis/charybdis_right.conf) : specific configuration for the sensor (sensitivity, orientation, etc). Options are described [here](https://github.com/inorichi/zmk-pmw3610-driver/blob/main/Kconfig)
-- [config/boards/shields/charybdis/charybdis_right.overlay](./config/boards/shields/charybdis/charybdis_right.overlay) : configuration of specific layers (scroll-layers, automouse-layer, snipe-layers)
+- [config/boards/shields/charybdis/charybdis_right.conf](./config/boards/shields/charybdis/charybdis_right.conf) : sensor power/sampling options. Options are described [here](https://github.com/badjeff/zmk-pmw3610-driver/blob/main/Kconfig)
+- [config/boards/shields/charybdis/charybdis_right.overlay](./config/boards/shields/charybdis/charybdis_right.overlay) : sensor CPI, orientation and layer-specific behaviour (e.g. scroll layer), using ZMK [input processors](https://zmk.dev/docs/keymaps/input-processors/usage)
+
+Firmware is built against ZMK `main` (Zephyr 4.1), with the [badjeff PMW3610 driver](https://github.com/badjeff/zmk-pmw3610-driver).
 
 ## Resources
 

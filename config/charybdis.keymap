@@ -1,8 +1,7 @@
-#include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define U_TAPPING_TERM 200
@@ -64,7 +63,6 @@
     behaviors {
         lhm: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -76,7 +74,6 @@
 
         rhm: right_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -87,7 +84,6 @@
         };
         tmt: thumb_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
@@ -96,7 +92,6 @@
         };
         base_lt: base_layer_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "BASE_LAYER_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
